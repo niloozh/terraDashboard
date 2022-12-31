@@ -1,0 +1,117 @@
+.required::after {
+  content: '*';
+  color: red;
+}
+
+.mainInputContainer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+%label {
+  color: $appGrayDarkColor;
+  font-size: 14px;
+
+  &Container {
+    margin-left: 4px;
+  }
+}
+
+.labelForInput {
+  @extend %label;
+
+  &Container {
+    margin-bottom: 4px;
+  }
+}
+
+.labelForCheckBoxField {
+  @extend %label;
+
+  // &Container {
+  //   margin-bottom: 16px;
+  // }
+}
+
+.labelForCheckBox {
+  @extend %label;
+
+  &Container {
+    margin-bottom: 16px;
+  }
+}
+
+.labelForRadioButton {
+  @extend %label;
+
+  &Container {
+    margin-bottom: 16px;
+  }
+}
+
+%inputField {
+  border: none;
+  box-shadow: $boxShadow1;
+  border: solid 1px $appGrayBrightColor;
+
+  &Container {
+    position: relative;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input {
+  &Field {
+    @extend %inputField;
+    width: 100%;
+    padding: 8px 1rem;
+    height: 40px;
+
+    &Container {
+      position: relative;
+    }
+  }
+
+  &WithIcon {
+    padding-left: 1.5rem;
+  }
+
+  &ErrorMessage {
+    display: none;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 8px;
+    font-size: 12px;
+    color: red;
+
+    &IsActive {
+      display: block;
+    }
+  }
+}
+
+.textAreaField {
+  @extend %inputField;
+  width: 100%;
+  padding: 8px 1rem;
+  height: 80px;
+  min-height: 40px;
+  max-height: 160px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.mainCheckBoxContainer {
+  margin-bottom: 2rem;
+}
+
+.chechBoxField {
+  @extend %inputField;
+}
+
+.radioButtonField {
+  @extend %inputField;
+}

@@ -1,0 +1,34 @@
+@import '@/styles/base/_variables';
+
+.anchor0 {
+  color: transparent;
+}
+
+.anchor1 {
+  text-decoration: underline;
+  color: blue;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.anchor2 {
+  padding: 1rem;
+  color: $themeTwo;
+
+  &:hover {
+    color: $fadedColor;
+  }
+}
+
+.anchor3 {
+  padding: 1rem;
+  color: $themeTwo;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $successColor;
+    transform: scale(1.05);
+  }
+}

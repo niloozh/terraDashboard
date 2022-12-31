@@ -1,0 +1,12 @@
+// .iswad_navItem,
+// .iswad_subNavItem {
+// }
+
+.iswad_subNavContainer {
+  width: 100%;
+  display: none;
+
+  &_active {
+    display: block;
+  }
+}
