@@ -28,4 +28,4 @@ export const WEBSOCKET_CHAT_API_ROUTE = `/wss/public-chat/`;
 // EXTERNAL API ROUTES
 export const GET_IP_INFO_ROUTE = 'https://geolocation-db.com/json/';
 export const GET_BAR_DATA_API_ROUTE =
-  'https://node-api.flipsidecrypto.com/api/v2/queries/217ebed7-b91e-48d7-b2c9-e4d4f651587b/data/latest';
+  'https://node-api.flipsidecrypto.com/api/v2/queries/276d95e6-d53d-412b-8164-13a270108b3d/data/latest';

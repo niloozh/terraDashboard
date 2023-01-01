@@ -1,65 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { Div } from 'basedesign-iswad';
 
-import useApiCalls from '@/hooks/useApiCalls';
-
-import { GET_BAR_DATA_API_ROUTE } from '@/constants/apiRoutes';
-
 import styles from './LineChart.module.scss';
 
-const LineChart = () => {
-  const [getBarDataReq, setGetBarDataReq] = useState(false);
-  const { data, error } = useApiCalls({
-    sendReq: getBarDataReq,
-    setSendReq: setGetBarDataReq,
-    method: 'GET',
-    url: GET_BAR_DATA_API_ROUTE
-  });
-  useEffect(() => {
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-  useEffect(() => {
-    setGetBarDataReq(true);
-  }, []);
+const LineChart = ({ lineData, showLegend = true, showTitle = true, titleText = '' }) => {
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: showLegend,
+        position: 'top'
+      },
+      title: {
+        display: showTitle,
+        text: titleText
+      }
+    }
+  };
 
   return (
     <>
-      <Div>LineChart</Div>
-      <Div>
-        {/* <Line
-          data={chartData}
-          options={{
-            responsive: true,
-            title: { text: 'THICCNESS SCALE', display: true },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    autoSkip: true,
-                    maxTicksLimit: 10,
-                    beginAtZero: true
-                  },
-                  gridLines: {
-                    display: false
-                  }
-                }
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: false
-                  }
-                }
-              ]
-            }
-          }}
-        /> */}
-      </Div>
+      <Div>{lineData?.labels && <Line options={options} data={lineData} />}</Div>
     </>
   );
 };
