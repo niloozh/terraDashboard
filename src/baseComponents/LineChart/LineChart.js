@@ -20,14 +20,47 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const LineChart = ({ lineData, showLegend = true, showTitle = true, titleText = '' }) => {
   const options = {
     responsive: true,
+    scales: {
+      y: {
+        ticks: {
+          callback: function (value, index, ticks) {
+            return parseFloat(value).toFixed(2);
+          }
+        },
+        title: {
+          display: true,
+          text: 'Average Fee',
+          font: {
+            size: 14
+          }
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Date',
+          font: {
+            size: 14
+          }
+        }
+      }
+    },
     plugins: {
       legend: {
         display: showLegend,
-        position: 'top'
+        position: 'top',
+        labels: {
+          font: {
+            size: 12
+          }
+        }
       },
       title: {
         display: showTitle,
-        text: titleText
+        text: titleText,
+        font: {
+          size: 14
+        }
       }
     }
   };

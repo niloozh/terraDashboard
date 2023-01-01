@@ -30,16 +30,14 @@ const Index = () => {
       const dates = [];
       const fees = [];
       data.forEach((d) => {
-        let curDate = dayjs(d['WEEK']).format('DD-MMM-YYYY');
-        let curFee = d['AVG_FEE'];
-        dates.push(`${curDate}`);
-        fees.push(curFee);
+        dates.push(dayjs(d['WEEK']).format('DD-MMM-YYYY'));
+        fees.push(d['AVG_FEE']);
       });
       const localData = {
         labels: dates,
         datasets: [
           {
-            label: 'Dataset 1',
+            label: '',
             data: fees,
             borderColor: 'rgb(255, 99, 132)',
             backgroundColor: 'rgba(255, 99, 132, 0.5)'
