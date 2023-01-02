@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
+import Card from '@/baseComponents/Card';
 import Logout from '@/baseComponents/Logout';
 import PublicRoute from '@/components/PublicRoute';
 import Seo from '@/components/Seo';
@@ -13,10 +14,54 @@ const Index = () => {
   return (
     <PublicRoute>
       <Seo title="Home | App">
-        <PageContainer pageIdentifier="home">
-          <Div>Hello</Div>
-          <Logout />
-        </PageContainer>
+        {/* <PageContainer pageIdentifier="home"> */}
+        <Div
+          className={cx('pos-fix pos-fix--lt height-vh-full w-per-100 bgBlue', styles.background)}
+        />
+        <Div
+          type="flex"
+          vAlign="end"
+          hAlign="center"
+          className="fs-px-30 w-per-100 height-vh-oneThird text-center textWhite">
+          TerraDash
+        </Div>
+
+        <Div type="flex" vAlign="end" hAlign="center" className="textWhite pt2">
+          {' '}
+          a dazzling dashboard full of analytic insights
+        </Div>
+        <Div type="flex" vAlign="end" hAlign="center" className="mt8 ">
+          <Card
+            type="nav"
+            text="Transactions"
+            subText="Get information about transactions on Terra by viewing charts."
+            url="/transactions"
+            className="m1"
+          />
+          <Card
+            type="nav"
+            text="Wallets"
+            subText="Learn about the activity of wallets on Terra."
+            url="/wallets"
+            className="m1"
+          />
+          <Card
+            type="nav"
+            text="Development"
+            subText="Dive into contract deployment and development on Terra."
+            url="/development"
+            className="m1"
+          />
+          <Card
+            type="nav"
+            text="Supply"
+            subText="Examine token supply and staking activity on Terra."
+            url="/supply"
+            className="m1"
+          />
+        </Div>
+        <Div className="mt8 textWhite w-per-100 flex flex--jc--end pr2 pt8">Powered by 💗</Div>
+        {/* </PageContainer> */}
       </Seo>
     </PublicRoute>
   );

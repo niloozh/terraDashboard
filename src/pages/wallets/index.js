@@ -5,6 +5,7 @@ import { Div, Heading } from 'basedesign-iswad';
 
 import Card from '@/baseComponents/Card';
 import LineChart from '@/baseComponents/LineChart';
+import BarChart from '@/baseComponents/BarChart';
 import PublicRoute from '@/components/PublicRoute';
 import Seo from '@/components/Seo';
 import PageContainer from '@/components/PageContainer';
@@ -63,11 +64,20 @@ const Index = () => {
             <Card type="stat" number={230} title="Number of active wallets" className="m1" />
             <Card type="stat" number={230} title="Number of active wallets" className="m1" />
           </Div>
-          <LineChart
-            lineData={lineData}
-            showLegend={false}
-            titleText="Line Chart for average fee"
-          />
+          <Div className="bgWhite card p2 w-per-50">
+            <LineChart
+              lineData={lineData}
+              showLegend={false}
+              titleText="Line Chart for average fee"
+            />
+          </Div>
+          <Div className="bgWhite card p2 w-per-50">
+            <BarChart
+              barData={lineData}
+              showLegend={false}
+              titleText="Line Chart for average fee"
+            />
+          </Div>
         </PageContainer>
       </Seo>
     </PublicRoute>

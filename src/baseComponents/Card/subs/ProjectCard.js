@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import styles from '../Card.module.scss';
 
-const ProjectCard = ({ className, ...props }) => {
+const NavCard = ({ className, ...props }) => {
   return (
     <>
       <Card
@@ -21,4 +21,4 @@ const ProjectCard = ({ className, ...props }) => {
   );
 };
 
-export default ProjectCard;
+export default NavCard;

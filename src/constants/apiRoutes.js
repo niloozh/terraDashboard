@@ -29,3 +29,5 @@ export const WEBSOCKET_CHAT_API_ROUTE = `/wss/public-chat/`;
 export const GET_IP_INFO_ROUTE = 'https://geolocation-db.com/json/';
 export const GET_BAR_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/276d95e6-d53d-412b-8164-13a270108b3d/data/latest';
+export const GET_TX_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/266cc6f0-59ce-4226-9a0f-61a3df72183a/data/latest';
