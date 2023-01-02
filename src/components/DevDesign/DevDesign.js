@@ -17,7 +17,7 @@ import DisplayTable from './subs/DisplayTable';
 import DisplayText from './subs/DisplayText';
 import DisplayParagraph from './subs/DisplayParagraph';
 import DisplayDraggableFileUploader from './subs/DisplayDraggableFileUploader';
-
+import DisplayChart from './subs/DisplayChart';
 import styles from './DevDesign.module.scss';
 
 const DevDesign = () => {
@@ -55,6 +55,8 @@ const DevDesign = () => {
       <DisplayText />
       <Heading className="flex flex--jc--center flex--ai--center my1">Paragraph</Heading>
       <DisplayParagraph />
+      <Heading className="flex flex--jc--center flex--ai--center my1">Charts</Heading>
+      <DisplayChart />
     </>
   );
 };
