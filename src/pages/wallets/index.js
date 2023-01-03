@@ -13,6 +13,7 @@ import PageContainer from '@/components/PageContainer';
 import useApiCalls from '@/hooks/useApiCalls';
 
 import { GET_BAR_DATA_API_ROUTE } from '@/constants/apiRoutes';
+import { GET_TX_DATA_API_ROUTE } from '@/constants/apiRoutes';
 
 import styles from './Index.module.scss';
 
@@ -64,20 +65,24 @@ const Index = () => {
             <Card type="stat" number={230} title="Number of active wallets" className="m1" />
             <Card type="stat" number={230} title="Number of active wallets" className="m1" />
           </Div>
+          <Div className="textWhite fs-px-24"> Average transaction fees per week</Div>
           <Div className="bgWhite card p2 w-per-50">
+            {console.log(lineData)}
             <LineChart
               lineData={lineData}
               showLegend={false}
               titleText="Line Chart for average fee"
             />
           </Div>
-          <Div className="bgWhite card p2 w-per-50">
+          <Div className="textWhite fs-px-24"> Total transaction fees per week</Div>
+
+          {/* <Div className="bgWhite card p2 w-per-50">
             <BarChart
               barData={lineData}
               showLegend={false}
               titleText="Line Chart for average fee"
             />
-          </Div>
+          </Div> */}
         </PageContainer>
       </Seo>
     </PublicRoute>

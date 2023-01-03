@@ -24,7 +24,7 @@ const DisplayChart = () => {
         type="flex"
         hAlign="center"
         vAlign="center"
-        className={cx('p1 w-per-90 flex--wrap', styles.card)}>
+        className={cx('p1 bgWhite w-per-90 flex--wrap', styles.card)}>
         <Div type="flex" hAlign="center" vAlign="center" direction="vertical">
           <Button onClick={() => setChartType('singleLabeledLineChart')} className="w-px-300 mb1">
             Show Labeled Line Chart

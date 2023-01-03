@@ -54,8 +54,9 @@ const BarChart = ({
         display: showTitle,
         text: titleText,
         font: {
-          size: 14
-        }
+          size: 16
+        },
+        color: 'white'
       },
       datalabels: {
         display: showDataLabels,
