@@ -14,6 +14,7 @@ const Index = () => {
     <PublicRoute>
       <Seo>
         <PageContainer>
+          <Div> Transactions </Div>
           <TransactionCharts />
         </PageContainer>
       </Seo>

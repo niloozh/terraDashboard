@@ -31,3 +31,5 @@ export const GET_BAR_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/276d95e6-d53d-412b-8164-13a270108b3d/data/latest';
 export const GET_TX_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/e0314f22-69c1-40dc-8149-596e3b0ecd45/data/latest';
+export const GET_WALLET_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/1d4d24e6-2dec-4ae5-9bce-db13e477f172/data/latest';
