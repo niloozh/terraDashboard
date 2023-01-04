@@ -14,13 +14,12 @@ const Y_AXIS_OPTIONS = {
     callback: function (value, index, ticks) {
       return value;
     },
-
     beginAtZero: true,
     color: 'white'
   },
   title: {
     display: true,
-    text: 'Wallets Count',
+    text: 'Contracts Count',
     font: {
       size: 14
     },
@@ -70,11 +69,9 @@ const DeployedContractsChart = () => {
     if (data) {
       const x = [];
       const y1 = [];
-      const y2 = [];
       data.forEach((d) => {
         x.push(dayjs(d['WEEK']).format('DD-MMM-YYYY'));
         y1.push(d['CONTRACTS_DEPLOYED']);
-        y2.push(d['CUMU_CONTRACTS_DEPLOYED']);
       });
       const localData = {
         labels: x,
@@ -84,13 +81,6 @@ const DeployedContractsChart = () => {
             data: y1,
             borderColor: 'pink',
             backgroundColor: 'pink'
-          },
-          {
-            type: 'line',
-            label: 'Cumulative Number of Contracts Deployed Weekly',
-            data: y2,
-            borderColor: 'rgb(145, 220, 223)',
-            backgroundColor: 'rgb(145, 220, 223)'
           }
         ]
       };
@@ -108,8 +98,8 @@ const DeployedContractsChart = () => {
         <Chart
           type="bar"
           data={chartData}
-          showLegend={true}
-          titleText="New and Active Wallets"
+          showLegend={false}
+          titleText="Number of Deployed Contracts Weekly"
           yAxisOptions={Y_AXIS_OPTIONS}
           xAxisOptions={X_AXIS_OPTIONS}
           barBorderWidth={2}

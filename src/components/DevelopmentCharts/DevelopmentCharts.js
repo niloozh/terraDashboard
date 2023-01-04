@@ -8,6 +8,7 @@ import CumNewContractsCharts from './subs/CumNewContractCharts';
 import styles from './DevelopmentCharts.module.scss';
 import ActiveContractsChart from './subs/ActiveContractsChart';
 import DeployedContractsChart from './subs/DeployedContractsChart';
+import CumDeployedContractsCharts from './subs/CumDeployedContractsChart';
 
 const DevelopmentCharts = () => {
   return (
@@ -20,8 +21,17 @@ const DevelopmentCharts = () => {
           <CumNewContractsCharts />
         </Div>
       </Div>
-      <ActiveContractsChart />
-      <DeployedContractsChart />
+      <Div type="flex" className="">
+        <Div className="w-per-50 p1">
+          <DeployedContractsChart />
+        </Div>
+        <Div className="w-per-50 p1">
+          <CumDeployedContractsCharts />
+        </Div>
+      </Div>
+      <Div className="w-per-50">
+        <ActiveContractsChart />
+      </Div>
     </>
   );
 };

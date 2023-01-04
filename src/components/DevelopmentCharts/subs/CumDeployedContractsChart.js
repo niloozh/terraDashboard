@@ -5,21 +5,21 @@ import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
 
-import { GET_WALLET_DATA_API_ROUTE } from '@/constants/apiRoutes';
+import { GET_CONTRACT_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
-import styles from '../WalletCharts.module.scss';
+import styles from '../DevelopmentCharts.module.scss';
 
 const Y_AXIS_OPTIONS = {
   ticks: {
     callback: function (value, index, ticks) {
-      return `${value / 1000}K`;
+      return value;
     },
     beginAtZero: true,
     color: 'white'
   },
   title: {
     display: true,
-    text: 'Average Fee',
+    text: 'Contracts Count',
     font: {
       size: 14
     },
@@ -54,13 +54,13 @@ const X_AXIS_OPTIONS = {
   }
 };
 
-const CumNewWalletsCharts = () => {
+const CumDeployedContractsCharts = () => {
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
     setSendReq: setGetDataReq,
     method: 'GET',
-    url: GET_WALLET_DATA_API_ROUTE
+    url: GET_CONTRACT_DATA_API_ROUTE
   });
 
   const chartData = useMemo(() => {
@@ -68,8 +68,8 @@ const CumNewWalletsCharts = () => {
       const x = [];
       const y = [];
       data.forEach((d) => {
-        x.push(dayjs(d['WEEK']).format('DD-MMM-YYYY'));
-        y.push(d['CUM_NEW_WALLETS']);
+        x.push(dayjs(d['DATE']).format('DD-MMM-YYYY'));
+        y.push(d['CUMU_CONTRACTS_DEPLOYED']);
       });
       const localData = {
         labels: x,
@@ -98,7 +98,7 @@ const CumNewWalletsCharts = () => {
           type="line"
           data={chartData}
           showLegend={false}
-          titleText="Cumulative Count of New Wallets"
+          titleText="Cumulative Count of New Contracts Deployed"
           yAxisOptions={Y_AXIS_OPTIONS}
           xAxisOptions={X_AXIS_OPTIONS}
           lineBorderWidth={2}
@@ -110,4 +110,4 @@ const CumNewWalletsCharts = () => {
   );
 };
 
-export default CumNewWalletsCharts;
+export default CumDeployedContractsCharts;
