@@ -37,3 +37,13 @@ export const GET_DEPLOYMENT_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/f8396d8a-0e3f-437e-8c63-bd2f3a315e40/data/latest';
 export const GET_CONTRACT_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/b653fd0f-8afa-43e9-8c05-db9b6906a881/data/latest';
+export const GET_SUPPLY_CARD_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/af45fd3b-2448-4473-bf8c-8a9936ea0064/data/latest';
+export const GET_STAKE_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/23bb16fb-20f2-41a7-be4a-47de468b77a0/data/latest';
+export const GET_STAKED_TYPE_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/592a75da-fa9d-4632-b173-8c45886dbae8/data/latest';
+export const GET_STAKE_ACTION_COUNT_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/6f00e7a4-ef54-4fa8-ae36-06a0eda90779/data/latest';
+export const GET_VESTING_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/eb106ef2-5962-4de6-bb7c-a6730e76622e/data/latest';

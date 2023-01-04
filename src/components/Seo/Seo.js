@@ -20,7 +20,7 @@ const Seo = ({ title, keywords, description, children }) => {
 
 Seo.defaultProps = {
   title: 'Terra Dash',
-  description: 'This app is a dashboard for analysing Terra',
+  description: 'This is a dashboard for analysing Terra',
   keywords: 'Terra, Luna, Terra analytics, Terra Dashboard'
 };
 

@@ -22,7 +22,8 @@ const PieChart = ({
         labels: {
           font: {
             size: 12
-          }
+          },
+          color: 'white'
         }
       },
       title: {
@@ -30,7 +31,8 @@ const PieChart = ({
         text: titleText,
         font: {
           size: 14
-        }
+        },
+        color: 'white'
       },
       datalabels: {
         display: showDataLabel,

@@ -1,6 +1,6 @@
 import React from "react";
 import { render as renderRTL, screen, fireEvent } from "@testing-library/react";
-import LineChart from "../LineChart";
+import SupplyChart from "../SupplyChart";
 import * as reactRedux from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,7 +12,7 @@ jest.mock("react-redux", () => ({
   useDispatch: jest.fn(),
 }));
 
-describe("Test LineChart Component", () => {
+describe("Test SupplyChart Component", () => {
   const useSelectorMock = reactRedux.useSelector;
   const useDispatchMock = reactRedux.useDispatch;
 
@@ -27,8 +27,8 @@ describe("Test LineChart Component", () => {
   });
 
   test("", () => {
-    render(<LineChart />);
+    render(<SupplyChart />);
 
-    expect(screen.getByText(/LineChart/i)).toBeInTheDocument();
+    expect(screen.getByText(/SupplyChart/i)).toBeInTheDocument();
   });
 });
