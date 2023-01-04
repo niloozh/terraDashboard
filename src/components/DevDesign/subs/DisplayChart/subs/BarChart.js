@@ -77,7 +77,8 @@ const BarChart = () => {
             label: 'Quadratic Curve',
             data: y1,
             borderColor: 'red',
-            backgroundColor: 'yellow'
+            backgroundColor: 'yellow',
+            color: 'white'
           },
           {
             label: 'Linear Curve',

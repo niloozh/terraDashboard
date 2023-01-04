@@ -47,7 +47,8 @@ const BarChart = ({
         labels: {
           font: {
             size: 12
-          }
+          },
+          color: 'white'
         }
       },
       title: {

@@ -5,21 +5,21 @@ import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
 
-import { GET_WALLET_DATA_API_ROUTE } from '@/constants/apiRoutes';
+import { GET_DEPLOYMENT_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
-import styles from '../WalletCharts.module.scss';
+import styles from '../DevelopmentCharts.module.scss';
 
 const Y_AXIS_OPTIONS = {
   ticks: {
     callback: function (value, index, ticks) {
-      return `${value / 1000}K`;
+      return value;
     },
     beginAtZero: true,
     color: 'white'
   },
   title: {
     display: true,
-    text: 'Average Fee',
+    text: 'Count of New Contracts',
     font: {
       size: 14
     },
@@ -54,30 +54,41 @@ const X_AXIS_OPTIONS = {
   }
 };
 
-const CumNewWalletsCharts = () => {
+const NewContractChart = () => {
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
     setSendReq: setGetDataReq,
     method: 'GET',
-    url: GET_WALLET_DATA_API_ROUTE
+    url: GET_DEPLOYMENT_DATA_API_ROUTE
   });
 
   const chartData = useMemo(() => {
     if (data) {
       const x = [];
-      const y = [];
+      const y1 = [];
+      const y2 = [];
       data.forEach((d) => {
-        x.push(dayjs(d['WEEK']).format('DD-MMM-YYYY'));
-        y.push(d['CUM_NEW_WALLETS']);
+        x.push(dayjs(d['DATE']).format('DD-MMM-YYYY'));
+        y1.push(d['NO_OF_NEW_CONTRACTS']);
+        y2.push(d['prior_7_days_avg_no_of_new_contracts']);
       });
       const localData = {
         labels: x,
         datasets: [
           {
-            label: '',
+            type: 'line',
+            label: "MA of last week's new contracts",
             fill: false,
-            data: y,
+            data: y2,
+            borderColor: 'rgb(145, 220, 223)',
+            backgroundColor: 'rgb(145, 220, 223)'
+          },
+          {
+            type: 'bar',
+            label: 'new contract',
+            fill: false,
+            data: y1,
             borderColor: 'pink',
             backgroundColor: 'pink'
           }
@@ -95,12 +106,15 @@ const CumNewWalletsCharts = () => {
     <>
       <Div className="bgThemeOne br-rad-px-10 p3">
         <Chart
-          type="line"
+          type="bar"
           data={chartData}
-          showLegend={false}
-          titleText="Cumulative Count of New Wallets"
+          showLegend={true}
+          titleText="Number of New Contracts"
           yAxisOptions={Y_AXIS_OPTIONS}
           xAxisOptions={X_AXIS_OPTIONS}
+          showDataLabels={false}
+          barBorderWidth={2}
+          indexAxis="x"
           lineBorderWidth={2}
           pointBorderWidth={1}
           pointRadius={4}
@@ -110,4 +124,4 @@ const CumNewWalletsCharts = () => {
   );
 };
 
-export default CumNewWalletsCharts;
+export default NewContractChart;

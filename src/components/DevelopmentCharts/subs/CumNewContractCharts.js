@@ -5,21 +5,21 @@ import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
 
-import { GET_WALLET_DATA_API_ROUTE } from '@/constants/apiRoutes';
+import { GET_DEPLOYMENT_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
-import styles from '../WalletCharts.module.scss';
+import styles from '../DevelopmentCharts.module.scss';
 
 const Y_AXIS_OPTIONS = {
   ticks: {
     callback: function (value, index, ticks) {
-      return `${value / 1000}K`;
+      return value;
     },
     beginAtZero: true,
     color: 'white'
   },
   title: {
     display: true,
-    text: 'Average Fee',
+    text: 'Cumulative Number of New Contracts',
     font: {
       size: 14
     },
@@ -54,13 +54,13 @@ const X_AXIS_OPTIONS = {
   }
 };
 
-const CumNewWalletsCharts = () => {
+const CumNewContractsCharts = () => {
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
     setSendReq: setGetDataReq,
     method: 'GET',
-    url: GET_WALLET_DATA_API_ROUTE
+    url: GET_DEPLOYMENT_DATA_API_ROUTE
   });
 
   const chartData = useMemo(() => {
@@ -68,18 +68,18 @@ const CumNewWalletsCharts = () => {
       const x = [];
       const y = [];
       data.forEach((d) => {
-        x.push(dayjs(d['WEEK']).format('DD-MMM-YYYY'));
-        y.push(d['CUM_NEW_WALLETS']);
+        x.push(dayjs(d['DATE']).format('DD-MMM-YYYY'));
+        y.push(d['CUM_NO_OF_CONTRACTS']);
       });
       const localData = {
         labels: x,
         datasets: [
           {
             label: '',
-            fill: false,
+            fill: true,
             data: y,
-            borderColor: 'pink',
-            backgroundColor: 'pink'
+            borderColor: 'rgba(255, 192, 203)',
+            backgroundColor: 'rgba(255, 192, 203, 0.822)'
           }
         ]
       };
@@ -98,16 +98,16 @@ const CumNewWalletsCharts = () => {
           type="line"
           data={chartData}
           showLegend={false}
-          titleText="Cumulative Count of New Wallets"
+          titleText="Cumulative Count of New Contracts"
           yAxisOptions={Y_AXIS_OPTIONS}
           xAxisOptions={X_AXIS_OPTIONS}
           lineBorderWidth={2}
           pointBorderWidth={1}
-          pointRadius={4}
+          pointRadius={2}
         />
       </Div>
     </>
   );
 };
 
-export default CumNewWalletsCharts;
+export default CumNewContractsCharts;

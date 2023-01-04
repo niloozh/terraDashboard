@@ -19,9 +19,9 @@ const Seo = ({ title, keywords, description, children }) => {
 };
 
 Seo.defaultProps = {
-  title: 'Pokemon App',
-  description: 'This app is designed by Mohammad Mohajer only for test purposes as an assessment',
-  keywords: 'Pokemon, Doctalk, Mohammad Mohajer, Assessment'
+  title: 'Terra Dash',
+  description: 'This app is a dashboard for analysing Terra',
+  keywords: 'Terra, Luna, Terra analytics, Terra Dashboard'
 };
 
 export default Seo;

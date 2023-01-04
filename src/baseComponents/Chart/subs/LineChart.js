@@ -51,7 +51,8 @@ const LineChart = ({
         text: titleText,
         font: {
           size: 14
-        }
+        },
+        color: 'white'
       },
       datalabels: {
         display: showDataLabels,

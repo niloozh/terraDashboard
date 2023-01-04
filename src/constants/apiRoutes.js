@@ -30,6 +30,10 @@ export const GET_IP_INFO_ROUTE = 'https://geolocation-db.com/json/';
 export const GET_BAR_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/276d95e6-d53d-412b-8164-13a270108b3d/data/latest';
 export const GET_TX_DATA_API_ROUTE =
-  'https://node-api.flipsidecrypto.com/api/v2/queries/e0314f22-69c1-40dc-8149-596e3b0ecd45/data/latest';
+  'https://node-api.flipsidecrypto.com/api/v2/queries/2f45154f-ad12-44bc-b9a7-df92f8b1f227/data/latest';
 export const GET_WALLET_DATA_API_ROUTE =
   'https://node-api.flipsidecrypto.com/api/v2/queries/1d4d24e6-2dec-4ae5-9bce-db13e477f172/data/latest';
+export const GET_DEPLOYMENT_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/f8396d8a-0e3f-437e-8c63-bd2f3a315e40/data/latest';
+export const GET_CONTRACT_DATA_API_ROUTE =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/b653fd0f-8afa-43e9-8c05-db9b6906a881/data/latest';
