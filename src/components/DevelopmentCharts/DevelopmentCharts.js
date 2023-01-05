@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Div } from 'basedesign-iswad';
+import { Div, Row, Column } from 'basedesign-iswad';
 
 import NewContractChart from './subs/NewContractChart';
 import CumNewContractsCharts from './subs/CumNewContractCharts';
@@ -13,25 +13,28 @@ import CumDeployedContractsCharts from './subs/CumDeployedContractsChart';
 const DevelopmentCharts = () => {
   return (
     <>
-      <Div type="flex" className="">
-        <Div className="w-per-50 p1">
-          <NewContractChart />
-        </Div>
-        <Div className="w-per-50 p1">
-          <CumNewContractsCharts />
-        </Div>
-      </Div>
-      <Div type="flex" className="">
-        <Div className="w-per-50 p1">
-          <DeployedContractsChart />
-        </Div>
-        <Div className="w-per-50 p1">
-          <CumDeployedContractsCharts />
-        </Div>
-      </Div>
-      <Div className="w-per-50">
-        <ActiveContractsChart />
-      </Div>
+      <Row>
+        <Column xs={12} sm={12} md={8} lg={8} className="">
+          <Div className="w-per-100 mb1">
+            <NewContractChart />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <CumNewContractsCharts />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <DeployedContractsChart />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <CumNewContractsCharts />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <CumDeployedContractsCharts />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <ActiveContractsChart />
+          </Div>
+        </Column>
+      </Row>
     </>
   );
 };

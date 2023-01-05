@@ -15,13 +15,6 @@ const TransactionCharts = () => {
   return (
     <>
       <Row>
-        <Column xs={12} sm={12} md={4} lg={4} className="pr2">
-          <Div className="w-per-100">
-            <Div type="flex" hAlign="center" className="mr1 ml1 mb1 w-per-100">
-              <TransactionCards />
-            </Div>
-          </Div>
-        </Column>
         <Column xs={12} sm={12} md={8} lg={8} className="">
           <Div className="w-per-100 mb1">
             <TotalTXsPerWeek />
@@ -40,6 +33,13 @@ const TransactionCharts = () => {
           </Div>
           <Div className="w-per-100 mb1">
             <AvgBlockTime />
+          </Div>
+        </Column>
+        <Column xs={12} sm={12} md={4} lg={4} className="">
+          <Div className="w-per-100">
+            <Div type="flex" hAlign="center" className="mr1 ml1 mb1 w-per-100">
+              <TransactionCards />
+            </Div>
           </Div>
         </Column>
       </Row>

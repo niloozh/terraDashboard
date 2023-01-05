@@ -23,7 +23,7 @@ function RichListTable() {
     {
       value: 'user',
       display: 'User',
-      width: 400,
+      width: 550,
       hasSearch: true,
       isSortable: false
     },
