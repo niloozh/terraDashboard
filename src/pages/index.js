@@ -15,9 +15,7 @@ const Index = () => {
     <PublicRoute>
       <Seo title="TerraDash">
         {/* <PageContainer pageIdentifier="home"> */}
-        <Div
-          className={cx('pos-fix pos-fix--lt height-vh-full w-per-100 bgBlue', styles.background)}
-        />
+        <Div className={cx('pos-fix pos-fix--lt height-vh-full w-per-100', styles.background)} />
         <Div
           type="flex"
           vAlign="end"
