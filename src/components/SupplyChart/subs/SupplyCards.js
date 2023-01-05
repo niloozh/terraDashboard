@@ -9,7 +9,7 @@ import { GET_SUPPLY_CARD_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../SupplyChart.module.scss';
 
-const Cards = () => {
+const SupplyCards = () => {
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
@@ -52,4 +52,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default SupplyCards;

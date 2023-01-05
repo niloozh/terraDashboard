@@ -5,14 +5,14 @@ import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
 
-import { GET_VESTING_DATA } from '@/constants/apiRoutes';
+import { GET_IBC_DATA } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../SupplyChart.module.scss';
 
 const Y_AXIS_OPTIONS = {
   ticks: {
     callback: function (value, index, ticks) {
-      return `${value / 1000000}M`;
+      return `${value / 1000}K`;
     },
     // stepSize: 40000,
     beginAtZero: true,
@@ -20,7 +20,7 @@ const Y_AXIS_OPTIONS = {
   },
   title: {
     display: true,
-    text: '$Luna',
+    text: 'Unique Transfers Count',
     font: {
       size: 14
     },
@@ -39,14 +39,14 @@ const Y2_AXIS_OPTIONS = {
   position: 'right',
   ticks: {
     callback: function (value, index, ticks) {
-      return value;
+      return `${value / 1000000000}B`;
     },
     beginAtZero: true,
     color: 'white'
   },
   title: {
     display: true,
-    text: 'Transactions Count',
+    text: '# of Luna',
     font: {
       size: 14
     },
@@ -61,7 +61,7 @@ const X_AXIS_OPTIONS = {
   },
   title: {
     display: true,
-    text: '',
+    text: 'Date',
     font: {
       size: 14
     },
@@ -75,13 +75,13 @@ const X_AXIS_OPTIONS = {
   }
 };
 
-const LunaVestingChart = () => {
+const IBCAmountChart = () => {
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
     setSendReq: setGetDataReq,
     method: 'GET',
-    url: GET_VESTING_DATA
+    url: GET_IBC_DATA
   });
 
   const chartData = useMemo(() => {
@@ -90,23 +90,23 @@ const LunaVestingChart = () => {
       const amount = [];
       const count = [];
       data.forEach((d) => {
-        x.push(d['Vesting Event']);
-        count.push(d['Total Transactions']);
-        amount.push(d['$LUNA from Vesting']);
+        x.push(dayjs(d['DATE']).format('DD-MMM-YYYY'));
+        count.push(d['UNIQUE_TRANSFERS']);
+        amount.push(d['AMOUNT']);
       });
       const localData = {
         labels: x,
         datasets: [
           {
-            label: '$LUNA from Vesting',
-            data: amount,
+            label: 'Transfers count',
+            data: count,
             borderColor: 'pink',
             backgroundColor: 'pink',
             yAxisID: 'y'
           },
           {
-            label: 'Total Transactions',
-            data: count,
+            label: 'LUNA IBC-ed out',
+            data: amount,
             borderColor: 'rgb(145, 220, 223)',
             backgroundColor: 'rgb(145, 220, 223)',
             yAxisID: 'y2'
@@ -128,7 +128,7 @@ const LunaVestingChart = () => {
           type="bar"
           data={chartData}
           showLegend={true}
-          titleText="Total Transactions and $LUNA Transferred by Vesting"
+          titleText="$ and # of Weekly IBC-ed out transfers"
           yAxisOptions={Y_AXIS_OPTIONS}
           y2AxisOptions={Y2_AXIS_OPTIONS}
           xAxisOptions={X_AXIS_OPTIONS}
@@ -140,4 +140,4 @@ const LunaVestingChart = () => {
   );
 };
 
-export default LunaVestingChart;
+export default IBCAmountChart;

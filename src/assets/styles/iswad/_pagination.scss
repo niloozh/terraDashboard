@@ -3,9 +3,19 @@
 
   &_item {
     margin: 1rem;
+    width: 25px;
+    height: 25px;
+    color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    border: solid 1px pink;
+    border-radius: 50%;
+    font-size: 12px;
     &_active {
-      color: red;
+      color: black;
+      background-color: pink;
     }
   }
 }

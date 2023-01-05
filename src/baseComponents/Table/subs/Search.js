@@ -18,7 +18,7 @@ const Search = React.forwardRef(
 
     return (
       <>
-        <Div className={cx('flex', activeSearch && 'ml1')}>
+        <Div className={cx('flex ml2', activeSearch && 'ml1')}>
           <Div
             className={cx(
               'min-height-px-30 min-w-px-30 br-rad-px-50 bgWhite flex flex--jc--center flex--ai--center iswad_search_container',

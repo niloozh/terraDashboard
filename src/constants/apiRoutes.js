@@ -47,3 +47,13 @@ export const GET_STAKE_ACTION_COUNT_DATA =
   'https://node-api.flipsidecrypto.com/api/v2/queries/6f00e7a4-ef54-4fa8-ae36-06a0eda90779/data/latest';
 export const GET_VESTING_DATA =
   'https://node-api.flipsidecrypto.com/api/v2/queries/eb106ef2-5962-4de6-bb7c-a6730e76622e/data/latest';
+export const GET_IBC_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/3c45cac5-b05b-4bcc-9500-3627447b0f52/data/latest';
+export const GET_STAKED_LUNA_PER =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/edc74886-e47f-4550-bcc6-f5901160fe40/data/latest';
+export const GET_REWARD_RECEIVER_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/2f326e08-4676-46a5-aad1-1f208fcb3ca4/data/latest';
+export const GET_TOTAL_STAKING_REWARD =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/9e2aec85-8899-471c-9414-cec68fec4353/data/latest';
+export const RICHLIST_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/64c02beb-148d-4eb4-a08f-513baebb1bf3/data/latest';

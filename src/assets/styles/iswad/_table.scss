@@ -2,6 +2,7 @@
   // border: solid 1px;
   border-radius: 10px;
 
+  color: white;
   &_headContainer {
     display: flex;
     // justify-content: center;
@@ -23,26 +24,33 @@
 
 .iswad_th {
   font-weight: bold;
+  font-size: 14px;
+  color: pink;
+  background-color: $themeFour;
   @extend %oneLine;
 }
 
 .iswad_tr {
   & .iswad_td {
-    border-bottom: dotted 0.3px $inverseColor;
+    // border-bottom: dotted 0.3px white;
   }
 
-  // &:nth-child(odd) {
-  //   background-color: dodgerblue;
-  // }
+  &:nth-child(odd) {
+    background-color: $themeFour;
+  }
 
   // &:nth-child(even) {
-  //   background-color: darkgoldenrod;
+  //   color: black;
   // }
 
   &:last-child {
     & .iswad_td {
       border-bottom: none;
     }
+  }
+  &:hover {
+    background-color: pink;
+    color: black;
   }
 }
 
@@ -51,8 +59,8 @@
   // justify-content: center;
   align-items: center;
   // border-right: solid 1px black;
-  padding: 8px 0;
-  border-bottom: dotted 0.2px $inverseColor;
+  padding: 10px 10px;
+  // border-bottom: dotted 0.2px $inverseColor;
 
   &:last-child {
     border-right: none;
