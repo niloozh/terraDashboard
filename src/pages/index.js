@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Div } from 'basedesign-iswad';
+import { Div, Row, Column } from 'basedesign-iswad';
 
 import Card from '@/baseComponents/Card';
 import Logout from '@/baseComponents/Logout';
@@ -28,36 +28,50 @@ const Index = () => {
           {' '}
           A dazzling dashboard full of analytic insights
         </Div>
-        <Div type="flex" vAlign="end" hAlign="center" className="mt8 ">
-          <Card
-            type="nav"
-            text="Transactions"
-            subText="Get information about transactions on Terra by viewing charts."
-            url="/transactions"
-            className="m1"
-          />
-          <Card
-            type="nav"
-            text="Wallets"
-            subText="Learn about the activity of wallets on Terra."
-            url="/wallets"
-            className="m1"
-          />
-          <Card
-            type="nav"
-            text="Development"
-            subText="Dive into contract deployment and development on Terra."
-            url="/development"
-            className="m1"
-          />
-          <Card
-            type="nav"
-            text="Supply"
-            subText="Examine token supply and staking activity on Terra."
-            url="/supply"
-            className="m1"
-          />
-        </Div>
+        <Row className="mt8 pl8 pr8 flex flex--jc--center">
+          <Column xs={12} sm={12} md={6} lg={3} className="flex flex--jc--center">
+            <Card
+              type="nav"
+              text="Transactions"
+              subText="Get information about transactions on Terra by viewing charts."
+              url="/transactions"
+              className="m1"
+            />
+          </Column>
+          <Column xs={12} sm={12} md={6} lg={3} className="flex flex--jc--center">
+            <Card
+              type="nav"
+              text="Wallets"
+              subText="Learn about the activity of wallets on Terra."
+              url="/wallets"
+              className="m1"
+            />
+          </Column>
+          <Column xs={12} sm={12} md={6} lg={3} className="flex flex--jc--center">
+            {' '}
+            <Card
+              type="nav"
+              text="Development"
+              subText="Dive into contract deployment and development on Terra."
+              url="/development"
+              className="m1"
+            />
+          </Column>
+          <Column xs={12} sm={12} md={6} lg={3} className="flex flex--jc--center">
+            {' '}
+            <Card
+              type="nav"
+              text="Supply"
+              subText="Examine token supply and staking activity on Terra."
+              url="/supply"
+              className="m1"
+            />
+          </Column>
+        </Row>
+        {/* <Div type="flex" vAlign="end" hAlign="center" className="mt8 ">
+            
+         
+        </Div> */}
         {/* <footer className="pos-fix ">hi</footer> */}
         {/* </PageContainer> */}
       </Seo>
