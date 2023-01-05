@@ -9,6 +9,12 @@
   box-shadow: $boxShadow1;
 }
 
+.desktopNavItem {
+  &:hover {
+    color: pink;
+  }
+}
+
 .activeMobileNavItem {
   background-color: $themeFour;
   box-shadow: $boxShadow1;

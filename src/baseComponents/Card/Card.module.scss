@@ -1,10 +1,49 @@
 .hover {
   &:hover {
-    border-color: antiquewhite;
+    border-color: #ffc0cb;
   }
 }
 
 .navMain {
   height: 120px;
   border-color: transparent;
+}
+
+.stat {
+  background: rgb(255, 192, 203);
+  background: -moz-linear-gradient(
+    -90deg,
+    rgba(255, 192, 203, 0.7371323529411764) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    -90deg,
+    rgba(255, 192, 203, 0.7371323529411764) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 192, 203, 0.7371323529411764) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc0cb",endColorstr="#000000",GradientType=1);
+  &:hover {
+    background: rgb(255, 192, 203);
+    background: -moz-linear-gradient(
+      -90deg,
+      rgba(255, 192, 203, 0.3029586834733894) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      -90deg,
+      rgba(255, 192, 203, 0.3029586834733894) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+      -90deg,
+      rgba(255, 192, 203, 0.3029586834733894) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc0cb",endColorstr="#000000",GradientType=1);
+  }
 }
