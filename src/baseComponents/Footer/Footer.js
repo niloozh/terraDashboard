@@ -14,14 +14,20 @@ const Footer = () => {
           vAlign="center"
           className={cx('textWhite bgThemeOne fs-px-14 p1', styles.copyRightContainer)}>
           © 2023 | Powered by
+          <a href="http://flipsidecrypto.xyz" className={cx('flex flex--jc--center ml1 textWhite')}>
+            Flipsidecrypto
+          </a>
+          ,
           <a
-            href="https://www.iswad.tech"
+            href="https://metricsdao.xyz/"
             className={cx('flex mr1 flex--jc--center ml1 textWhite')}>
-            Niloozh
+            MetricsDao
           </a>
           &
-          <a href="https://www.iswad.tech" className={cx('flex flex--jc--center ml1 textWhite')}>
-            Flipside
+          <a
+            href="https://github.com/niloozh"
+            className={cx('flex mr1 flex--jc--center ml1 textWhite')}>
+            Niloozh
           </a>
         </Div>
       </Div>

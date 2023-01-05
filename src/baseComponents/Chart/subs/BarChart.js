@@ -46,7 +46,8 @@ const BarChart = ({
         position: 'top',
         labels: {
           font: {
-            size: 12
+            size: 12,
+            family: 'Poppins'
           },
           color: 'white'
         }
@@ -55,7 +56,8 @@ const BarChart = ({
         display: showTitle,
         text: titleText,
         font: {
-          size: 16
+          size: 16,
+          family: 'Poppins'
         },
         color: 'white'
       },
@@ -64,6 +66,9 @@ const BarChart = ({
         align: 'center',
         padding: {
           right: 0
+        },
+        font: {
+          family: 'Poppins'
         }
       }
     }

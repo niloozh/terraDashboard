@@ -12,6 +12,7 @@ import IBCAmountChart from './subs/IBCAmountChart';
 import StakedLunaPerCard from './subs/StakedLunaPerCard';
 import RewardReceiversCards from './subs/RewardReceiversCards';
 import RichListTable from './subs/RichListTable';
+import RewardDistribution from './subs/RewardDistribution';
 
 const SupplyChart = () => {
   return (
@@ -27,8 +28,11 @@ const SupplyChart = () => {
           <Div className="w-per-100 mb1">
             <LunaVestingChart />
           </Div>
-          <Div className="w-per-100">
+          <Div className="w-per-100 mb1">
             <IBCAmountChart />
+          </Div>
+          <Div className="w-per-100 ">
+            <RewardDistribution />
           </Div>
           <Div className="w-per-100">
             <RichListTable />

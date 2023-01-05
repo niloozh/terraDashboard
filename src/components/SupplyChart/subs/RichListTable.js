@@ -29,7 +29,7 @@ function RichListTable() {
     },
     {
       value: 'balance',
-      display: 'Balance',
+      display: 'Balance (Luna)',
       width: 200,
       hasSearch: false,
       isSortable: true
@@ -67,6 +67,7 @@ function RichListTable() {
         hAlign="center"
         vAlign="center"
         className={cx('p1 w-per-100 bgThemeOne br-rad-px-10 mt1 flex--wrap of-x-auto scrollType1')}>
+        <Div className="m1 textWhite fs-px-20 f-b"> Rich List Table</Div>
         <Table
           headLines={headLines}
           data={tableData}

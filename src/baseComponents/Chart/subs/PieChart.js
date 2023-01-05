@@ -21,7 +21,8 @@ const PieChart = ({
         position: 'top',
         labels: {
           font: {
-            size: 12
+            size: 12,
+            family: 'Poppins'
           },
           color: 'white'
         }
@@ -30,7 +31,8 @@ const PieChart = ({
         display: showTitle,
         text: titleText,
         font: {
-          size: 14
+          size: 14,
+          family: 'Poppins'
         },
         color: 'white'
       },
@@ -40,6 +42,9 @@ const PieChart = ({
         align: 'center',
         padding: {
           right: 0
+        },
+        font: {
+          family: 'Poppins'
         },
         color: 'black'
       }

@@ -50,7 +50,8 @@ const LineChart = ({
         display: showTitle,
         text: titleText,
         font: {
-          size: 14
+          size: 14,
+          family: 'Poppins'
         },
         color: 'white'
       },

@@ -13,7 +13,7 @@ import styles from './index.module.scss';
 const Index = () => {
   return (
     <PublicRoute>
-      <Seo title="Home | App">
+      <Seo title="TerraDash">
         {/* <PageContainer pageIdentifier="home"> */}
         <Div
           className={cx('pos-fix pos-fix--lt height-vh-full w-per-100 bgBlue', styles.background)}
@@ -22,13 +22,13 @@ const Index = () => {
           type="flex"
           vAlign="end"
           hAlign="center"
-          className="fs-px-30 w-per-100 height-vh-oneThird text-center textWhite">
+          className="fs-px-32 f-b w-per-100 height-vh-oneThird text-center textWhite">
           TerraDash
         </Div>
 
         <Div type="flex" vAlign="end" hAlign="center" className="textWhite pt2">
           {' '}
-          a dazzling dashboard full of analytic insights
+          A dazzling dashboard full of analytic insights
         </Div>
         <Div type="flex" vAlign="end" hAlign="center" className="mt8 ">
           <Card
@@ -60,7 +60,7 @@ const Index = () => {
             className="m1"
           />
         </Div>
-        <Div className="mt8 textWhite w-per-100 flex flex--jc--end pr2 pt8">Powered by 💗</Div>
+        {/* <footer className="pos-fix ">hi</footer> */}
         {/* </PageContainer> */}
       </Seo>
     </PublicRoute>

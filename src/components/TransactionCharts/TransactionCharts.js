@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Div } from 'basedesign-iswad';
+import { Div, Row, Column } from 'basedesign-iswad';
 
 import TotalTXsPerWeek from './subs/TotalTXsPerWeek';
 import styles from './TransactionCharts.module.scss';
@@ -9,45 +9,40 @@ import AvgTXsFeesPerWeek from './subs/AvgTXsFeesPerWeek';
 import TPS from './subs/TPS';
 import AvgBlockTime from './subs/AvgBlockTime';
 import TXsPerBlock from './subs/TXsPerBlock';
+import TransactionCards from './subs/TransactionCards';
 
 const TransactionCharts = () => {
   return (
     <>
-      <Div className="fs-px-30 w-per-30 textPink br-bottom-solid-1 br-color-pink mb3">
-        Transactions Count
-      </Div>
-      <Div type="flex">
-        <Div className="w-per-50 m1">
-          <TotalTXsPerWeek />
-        </Div>
-        <Div className="w-per-50 m1">
-          <TPS />
-        </Div>
-      </Div>
-
-      <Div className="fs-px-30 w-per-30 textPink br-bottom-solid-1 br-color-pink mb3 mt3">
-        Transactions Fee
-      </Div>
-      <Div type="flex">
-        <Div className="w-per-50 m1">
-          <AvgTXsFeesPerWeek />
-        </Div>
-        <Div className="w-per-50 m1">
-          <TotalFeesPerWeek />
-        </Div>
-      </Div>
-
-      <Div className="fs-px-30 w-per-30 textPink br-bottom-solid-1 br-color-pink mb3 mt3">
-        Block
-      </Div>
-      <Div type="flex">
-        <Div className="w-per-50 m1">
-          <TXsPerBlock />
-        </Div>
-        <Div className="w-per-50 m1">
-          <AvgBlockTime />
-        </Div>
-      </Div>
+      <Row>
+        <Column xs={12} sm={12} md={4} lg={4} className="pr2">
+          <Div className="w-per-100">
+            <Div type="flex" hAlign="center" className="mr1 ml1 mb1 w-per-100">
+              <TransactionCards />
+            </Div>
+          </Div>
+        </Column>
+        <Column xs={12} sm={12} md={8} lg={8} className="">
+          <Div className="w-per-100 mb1">
+            <TotalTXsPerWeek />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <TPS />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <AvgTXsFeesPerWeek />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <TotalFeesPerWeek />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <TXsPerBlock />
+          </Div>
+          <Div className="w-per-100 mb1">
+            <AvgBlockTime />
+          </Div>
+        </Column>
+      </Row>
     </>
   );
 };

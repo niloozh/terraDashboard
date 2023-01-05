@@ -28,7 +28,7 @@ const NavCard = ({ text, subText, url, className, ...props }) => {
             <Icon type="angleRight" color="white" className="ml3" />
           </Div>
         </Div>
-        <Div className="fs-px-14 textWhite height-px-50">{subText}</Div>
+        <Div className="fs-px-14 textWhite height-px-70">{subText}</Div>
       </Div>
     </>
   );

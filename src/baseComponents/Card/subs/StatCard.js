@@ -15,7 +15,7 @@ const StatCard = ({ className, number, title, ...props }) => {
           styles.stat,
           className
         )}>
-        <CardHeader className="textPink fs-px-28">{number}</CardHeader>
+        <CardHeader className="textPink fs-px-28 f-b">{number}</CardHeader>
         <CardBody className="p1 height-px-50 flex flex--ai--center textWhite">{title}</CardBody>
       </Card>
     </>

@@ -57,3 +57,9 @@ export const GET_TOTAL_STAKING_REWARD =
   'https://node-api.flipsidecrypto.com/api/v2/queries/9e2aec85-8899-471c-9414-cec68fec4353/data/latest';
 export const RICHLIST_DATA =
   'https://node-api.flipsidecrypto.com/api/v2/queries/64c02beb-148d-4eb4-a08f-513baebb1bf3/data/latest';
+export const REWARD_DISTRIBUTION =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/3346d71f-f4cb-4390-957a-4dfa9c1906aa/data/latest';
+export const GET_TRANSACTIONS_CARD_DATA =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/13c2231f-6e5c-48af-a8e4-e8a2ae37fda0/data/latest';
+export const GET_BLOCK_DATA_ =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/b80b5a8b-935b-46af-9b1d-c9c53c3b8e58/data/latest';
