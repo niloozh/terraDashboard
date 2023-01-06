@@ -4,7 +4,9 @@ import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
-
+import Anchor from '@/baseComponents/Anchor';
+import Icon from '@/baseComponents/Icon';
+import { GET_DEPLOYMENT_CODE } from '@/constants/apiRoutes';
 import { GET_DEPLOYMENT_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../DevelopmentCharts.module.scss';
@@ -105,6 +107,11 @@ const NewContractChart = () => {
   return (
     <>
       <Div className="bgThemeOne br-rad-px-10 p3">
+        <Div type="flex" hAlign="end">
+          <Anchor to={GET_DEPLOYMENT_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand'} />
+          </Anchor>
+        </Div>
         <Chart
           type="bar"
           data={chartData}
