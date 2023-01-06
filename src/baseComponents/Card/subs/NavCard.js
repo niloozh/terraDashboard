@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import styles from '../Card.module.scss';
 import Icon from '@/baseComponents/Icon';
 
-const NavCard = ({ text, subText, url, className, ...props }) => {
+const NavCard = ({ text, subText, url, iconType, className, ...props }) => {
   const router = useRouter();
   return (
     <>
@@ -22,6 +22,7 @@ const NavCard = ({ text, subText, url, className, ...props }) => {
         )}
         onClick={() => router.push(url)}>
         <Div type="flex" vAlign="center" className="textWhite fs-px-25 flex w-per-100 height-px-50">
+          <Icon type={iconType} color="white" className="mr2" scale={1.5} />
           <Div>{text}</Div>
 
           <Div className="">

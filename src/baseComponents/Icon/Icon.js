@@ -22,7 +22,12 @@ import {
   faMinus,
   faFileUpload,
   faSave,
-  faCode
+  faCode,
+  faChartSimple,
+  faWallet,
+  faRightLeft,
+  faLaptopCode,
+  faHandHoldingDollar
 } from '@fortawesome/free-solid-svg-icons';
 
 import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
@@ -41,6 +46,27 @@ function Icon({ type, color, width, scale, className, ...props }) {
     certificate: (
       <FontAwesomeIcon
         icon={faCertificate}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
+    ),
+    wallet: (
+      <FontAwesomeIcon icon={faWallet} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    transaction: (
+      <FontAwesomeIcon icon={faRightLeft} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    development: (
+      <FontAwesomeIcon icon={faLaptopCode} style={{ color, width, transform: `scale(${scale})` }} />
+    ),
+    supply: (
+      <FontAwesomeIcon
+        icon={faHandHoldingDollar}
+        style={{ color, width, transform: `scale(${scale})` }}
+      />
+    ),
+    chart: (
+      <FontAwesomeIcon
+        icon={faChartSimple}
         style={{ color, width, transform: `scale(${scale})` }}
       />
     ),

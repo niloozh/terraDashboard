@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Div, HamburgerIcon } from 'basedesign-iswad';
 import Router from 'next/router';
 
+import Icon from '@/baseComponents/Icon';
 import { lgDesignSize, smDesignSize } from '@/constants/vars';
 import { toggleMobileNav } from '@/reducers/general/mobileNavIsActive';
 
@@ -30,7 +31,8 @@ const Header = () => {
         distributedBetween
         vAlign="center"
         className={cx('w-per-100 bgThemeOne textWhite p2', styles.headerContainer)}>
-        <Div className="mouse-hand" onClick={() => Router.push('/')}>
+        <Div type="flex" className="mouse-hand" onClick={() => Router.push('/')}>
+          <Icon type="chart" color="pink" className="mr1" />
           TerraDash
         </Div>
         <Div type="flex" showIn={lgDesignSize}>
