@@ -3,6 +3,9 @@ import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 import Image from 'next/image';
 
+import Anchor from '@/baseComponents/Anchor';
+import Icon from '@/baseComponents/Icon';
+import { RICHLIST_CODE } from '@/constants/apiRoutes';
 import Button from '@/baseComponents/Button';
 import Table from '@/baseComponents/Table';
 import { RICHLIST_DATA } from '@/constants/apiRoutes';
@@ -67,6 +70,11 @@ function RichListTable() {
         hAlign="center"
         vAlign="center"
         className={cx('p1 w-per-100 bgThemeOne br-rad-px-10 mt1 flex--wrap of-x-auto scrollType1')}>
+        <Div type="flex" hAlign="end" className="w-per-100">
+          <Anchor to={RICHLIST_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand mr2 mt2'} />
+          </Anchor>
+        </Div>
         <Div className="m1 textWhite fs-px-20 f-b"> Rich List Table</Div>
         <Table
           headLines={headLines}

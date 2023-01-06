@@ -4,7 +4,9 @@ import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
-
+import Anchor from '@/baseComponents/Anchor';
+import Icon from '@/baseComponents/Icon';
+import { REWARD_DISTRIBUTION_CODE } from '@/constants/apiRoutes';
 import { REWARD_DISTRIBUTION } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../SupplyChart.module.scss';
@@ -95,6 +97,12 @@ const RewardDistribution = () => {
   return (
     <>
       <Div className="bgThemeOne br-rad-px-10 p3">
+        {' '}
+        <Div type="flex" hAlign="end">
+          <Anchor to={REWARD_DISTRIBUTION_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand'} />
+          </Anchor>
+        </Div>
         <Chart
           type="bar"
           data={chartData}

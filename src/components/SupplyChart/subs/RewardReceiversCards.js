@@ -4,7 +4,7 @@ import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
 import Card from '@/baseComponents/Card';
 import Chart from '@/baseComponents/Chart';
-
+import { GET_REWARD_RECEIVER_CODE } from '@/constants/apiRoutes';
 import { GET_REWARD_RECEIVER_DATA } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 
@@ -38,16 +38,19 @@ const RewardReceiversCards = () => {
           type="stat"
           number={(data?.[0]['REWARD_RECIVER'] / 1000).toFixed(0) + 'K'}
           title="Number of reward receivers"
+          to={GET_REWARD_RECEIVER_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['REWARDE_PER_STAKER']).toFixed(2)) + '$'}
           title="Average reward per staker"
+          to={GET_REWARD_RECEIVER_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['NUMBER'] / 1000).toFixed(0)) + 'K'}
           title="Number of reward transaction"
+          to={GET_REWARD_RECEIVER_CODE}
         />
       </Div>
     </>

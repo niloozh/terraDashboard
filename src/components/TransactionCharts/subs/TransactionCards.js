@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import Card from '@/baseComponents/Card';
 import Chart from '@/baseComponents/Chart';
 
+import { GET_TRANSACTIONS_CARD_CODE } from '@/constants/apiRoutes';
 import { GET_TRANSACTIONS_CARD_DATA } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../TransactionCharts.module.scss';
@@ -34,36 +35,43 @@ const TransactionCards = () => {
           type="stat"
           number={Number((data?.[0]['Total Transactions'] / 1000).toFixed(2)) + 'K'}
           title="Total Transactions"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Total Luna Volume'] / 1000000).toFixed(2)) + 'M'}
           title="Total Luna Volume"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Total Fees'] / 1000).toFixed(2)) + 'K'}
           title="Total Fees"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Average Transactions per Week'] / 1000).toFixed(2)) + 'K'}
           title="Average Count of Transactions per Week"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Average Volume per Week'] / 1000000).toFixed(2)) + 'M'}
           title="Average Total Transactions Volume per Week"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Average Fees per Week'] / 1000).toFixed(2)) + 'K'}
           title="Average of Total Fees per Week"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <Card
           type="stat"
           number={Number((data?.[0]['Average TPS per Week']).toFixed(3))}
           title="Average TPS per Week"
+          to={GET_TRANSACTIONS_CARD_CODE}
         />
         <BlocksCards />
       </Div>

@@ -3,7 +3,9 @@ import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 
 import Chart from '@/baseComponents/Chart';
-
+import Anchor from '@/baseComponents/Anchor';
+import Icon from '@/baseComponents/Icon';
+import { GET_STAKE_ACTION_COUNT_CODE } from '@/constants/apiRoutes';
 import { GET_STAKE_ACTION_COUNT_DATA } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../SupplyChart.module.scss';
@@ -58,7 +60,13 @@ const StakeActionAmountChart = () => {
 
   return (
     <>
-      <Div type="flex" hAlign="center" className="bgThemeOne br-rad-px-10 p3 w-per-100">
+      <Div hAlign="center" className="bgThemeOne br-rad-px-10 p3 w-per-100">
+        {' '}
+        <Div type="flex" hAlign="end" className="mb1">
+          <Anchor to={GET_STAKE_ACTION_COUNT_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand'} />
+          </Anchor>
+        </Div>
         <Chart
           type="pie"
           data={chartData}

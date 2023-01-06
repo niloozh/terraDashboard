@@ -21,7 +21,8 @@ import {
   faSearch,
   faMinus,
   faFileUpload,
-  faSave
+  faSave,
+  faCode
 } from '@fortawesome/free-solid-svg-icons';
 
 import Dashboard from '@/images/js-Images/icons/svg/dashboard.svg';
@@ -43,6 +44,7 @@ function Icon({ type, color, width, scale, className, ...props }) {
         style={{ color, width, transform: `scale(${scale})` }}
       />
     ),
+    code: <FontAwesomeIcon icon={faCode} style={{ color, width, transform: `scale(${scale})` }} />,
     quoteLeft: (
       <FontAwesomeIcon icon={faQuoteLeft} style={{ color, width, transform: `scale(${scale})` }} />
     ),

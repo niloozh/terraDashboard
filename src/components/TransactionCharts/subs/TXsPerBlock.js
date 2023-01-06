@@ -2,10 +2,13 @@ import React, { useEffect, useMemo, useState } from 'react';
 import cx from 'classnames';
 import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
+import { useRouter } from 'next/router';
 
 import Chart from '@/baseComponents/Chart';
-// import { BAR_CHART_DATA } from '../utils';
+import Icon from '@/baseComponents/Icon';
+import Anchor from '@/baseComponents/Anchor';
 import { GET_TX_DATA_API_ROUTE } from '@/constants/apiRoutes';
+import { GET_TX_CODE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 
 import styles from '../TransactionCharts.module.scss';
@@ -59,6 +62,7 @@ const X_AXIS_OPTIONS = {
 };
 
 const TXsPerBlock = () => {
+  const router = useRouter();
   const [getDataReq, setGetDataReq] = useState(false);
   const { data, error } = useApiCalls({
     sendReq: getDataReq,
@@ -66,6 +70,11 @@ const TXsPerBlock = () => {
     method: 'GET',
     url: GET_TX_DATA_API_ROUTE
   });
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(GET_TX_CODE);
+  };
+
   const chartData = useMemo(() => {
     if (data) {
       const x = [];
@@ -96,6 +105,12 @@ const TXsPerBlock = () => {
   return (
     <>
       <Div className="bgThemeOne br-rad-px-10 p3 w-per-100">
+        <Div type="flex" hAlign="end">
+          <Anchor to={GET_TX_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand'} />
+          </Anchor>
+        </Div>
+
         <Chart
           type="bar"
           data={chartData}

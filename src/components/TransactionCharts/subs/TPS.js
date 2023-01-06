@@ -4,7 +4,9 @@ import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
 
 import Chart from '@/baseComponents/Chart';
-// import { BAR_CHART_DATA } from '../utils';
+import Anchor from '@/baseComponents/Anchor';
+import Icon from '@/baseComponents/Icon';
+import { GET_TX_CODE } from '@/constants/apiRoutes';
 import { GET_TX_DATA_API_ROUTE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 
@@ -96,6 +98,11 @@ const TPS = () => {
   return (
     <>
       <Div className="bgThemeOne br-rad-px-10 p3">
+        <Div type="flex" hAlign="end">
+          <Anchor to={GET_TX_CODE} internal={false}>
+            <Icon type="code" color="white" className={'mouse-hand'} />
+          </Anchor>
+        </Div>
         <Chart
           type="bar"
           data={chartData}

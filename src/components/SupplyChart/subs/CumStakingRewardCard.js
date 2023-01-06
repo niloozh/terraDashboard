@@ -6,6 +6,7 @@ import Card from '@/baseComponents/Card';
 import Chart from '@/baseComponents/Chart';
 
 import { GET_TOTAL_STAKING_REWARD } from '@/constants/apiRoutes';
+import { GET_TOTAL_STAKING_REWARD_CODE } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../SupplyChart.module.scss';
 
@@ -28,6 +29,7 @@ const CumStakingRewardCard = () => {
         type="stat"
         number={Number((data?.[0]['CUMULATIVE_STAKING_REWARDS'] / 1000000).toFixed(2)) + 'M $'}
         title="Total staking reward"
+        to={GET_TOTAL_STAKING_REWARD_CODE}
       />
     </>
   );
