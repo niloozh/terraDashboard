@@ -24,9 +24,9 @@ const Index = () => {
             <Icon type="transaction" color="black" scale={1.5} className="mr3" />
             Transactions
           </Div>
-          <Div showIn={['xs', 'sm']} className="bgPink textWhite p1 mb1 br-rad-px-10">
-            If you are using a phone for having a better view of charts rotate the screen to
-            landscape and then refresh the page.
+          <Div showIn={['xs', 'sm']} className="bgPink textThemeFour fs-px-14 p1 mb1 br-rad-px-10">
+            In order to have a better view of charts on phone devices rotate the screen to landscape
+            and then refresh the page.
           </Div>
           <TransactionCharts />
         </PageContainer>

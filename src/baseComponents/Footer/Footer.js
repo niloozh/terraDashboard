@@ -12,7 +12,7 @@ const Footer = () => {
           type="flex"
           hAlign="center"
           vAlign="center"
-          className={cx('textWhite bgThemeOne fs-px-14 p1', styles.copyRightContainer)}>
+          className={cx('textWhite bgThemeOne fs-px-12 p1', styles.copyRightContainer)}>
           © 2023 | Powered by
           <a href="http://flipsidecrypto.xyz" className={cx('flex flex--jc--center ml1 textWhite')}>
             Flipsidecrypto
