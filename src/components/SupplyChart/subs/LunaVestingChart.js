@@ -9,6 +9,7 @@ import Icon from '@/baseComponents/Icon';
 import { GET_VESTING_CODE } from '@/constants/apiRoutes';
 import { GET_VESTING_DATA } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
+
 import styles from '../SupplyChart.module.scss';
 
 const Y_AXIS_OPTIONS = {

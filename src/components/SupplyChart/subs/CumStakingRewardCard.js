@@ -27,7 +27,7 @@ const CumStakingRewardCard = () => {
     <>
       <Card
         type="stat"
-        number={Number((data?.[0]['CUMULATIVE_STAKING_REWARDS'] / 1000000).toFixed(2)) + 'M $'}
+        number={Number((data?.[0]['CUMULATIVE_STAKING_REWARDS'] / 1000000).toFixed(2)) + 'M$'}
         title="Total staking reward"
         to={GET_TOTAL_STAKING_REWARD_CODE}
       />
