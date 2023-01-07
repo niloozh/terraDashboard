@@ -49,7 +49,7 @@ const AVGNewUsersAndSenders = () => {
         title="Avg receivers per week"
         to={GET_AVG_UNIQUE_SENDERS_CODE}
       />
-      {/* <UniqueWalletsCard /> */}
+      <UniqueWalletsCard />
     </>
   );
 };
