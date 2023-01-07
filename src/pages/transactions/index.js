@@ -4,6 +4,7 @@ import { Div } from 'basedesign-iswad';
 
 import PublicRoute from '@/components/PublicRoute';
 import Seo from '@/components/Seo';
+import Anchor from '@/baseComponents/Anchor';
 import PageContainer from '@/components/PageContainer';
 import TransactionCharts from '@/components/TransactionCharts';
 import Close from '@/baseComponents/Close';
@@ -20,9 +21,20 @@ const Index = () => {
             type="flex"
             hAlign="start"
             vAlign="center"
-            className="height-px-50 br-rad-px-10 bgPink br-color-pink text-center textBlack mb3 pr3 pl3">
-            <Icon type="transaction" color="black" scale={1.5} className="mr3" />
+            className=" br-rad-px-10 f-b br-color-pink text-center textSilver pr3 pl3">
+            <Icon type="transaction" color="silver" scale={1.5} className="mr3" />
             Transactions
+          </Div>
+          <Div className="pl7 fs-px-14 textSilver mb3">
+            <Anchor to={'/'} anchorType={2}>
+              Home
+            </Anchor>
+            {'>'}
+
+            <Anchor to={'/wallets'} anchorType={2}>
+              {' '}
+              Transactions
+            </Anchor>
           </Div>
           <Div showIn={['xs', 'sm']} className="bgPink textThemeFour fs-px-14 p1 mb1 br-rad-px-10">
             In order to have a better view of charts on phone devices rotate the screen to landscape
