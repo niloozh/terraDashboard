@@ -67,6 +67,11 @@ export const GET_ALL_TIME_WALLET_COUNT =
   'https://node-api.flipsidecrypto.com/api/v2/queries/a378d67d-f2ad-4dcb-bc09-252caba8d303/data/latest';
 export const GET_WALLET_DISTRIBUTION_BY_TRANSACTION =
   'https://node-api.flipsidecrypto.com/api/v2/queries/d09f8673-ff5e-481c-b4f1-c4da8319a0c1/data/latest';
+export const GET_AVG_UNIQUE_SENDERS =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/6264a0f5-5e25-4cc6-9b19-9076dcc5040f/data/latest';
+export const GET_TOP_10_USERS_BY_TX =
+  'https://node-api.flipsidecrypto.com/api/v2/queries/b6960eef-5f52-4ecd-b5c2-22d01b9028c7/data/latest';
+
 ///////// SQL QUERIES LINK
 
 export const GET_BAR_CODE =
@@ -109,3 +114,7 @@ export const GET_ALL_TIME_WALLET_COUNT_CODE =
   'https://app.flipsidecrypto.com/velocity/queries/a378d67d-f2ad-4dcb-bc09-252caba8d303';
 export const GET_WALLET_DISTRIBUTION_BY_TRANSACTION_CODE =
   'https://app.flipsidecrypto.com/velocity/queries/d09f8673-ff5e-481c-b4f1-c4da8319a0c1';
+export const GET_AVG_UNIQUE_SENDERS_CODE =
+  'https://app.flipsidecrypto.com/velocity/queries/6264a0f5-5e25-4cc6-9b19-9076dcc5040f';
+export const GET_TOP_10_USERS_BY_TX_CODE =
+  'https://app.flipsidecrypto.com/velocity/queries/b6960eef-5f52-4ecd-b5c2-22d01b9028c7';

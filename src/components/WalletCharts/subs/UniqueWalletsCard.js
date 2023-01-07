@@ -6,6 +6,7 @@ import Card from '@/baseComponents/Card';
 import Chart from '@/baseComponents/Chart';
 import { GET_ALL_TIME_WALLET_COUNT_CODE } from '@/constants/apiRoutes';
 import { GET_ALL_TIME_WALLET_COUNT } from '@/constants/apiRoutes';
+import AVGNewUsersAndSenders from './AVGNewUsersAndSenders';
 import useApiCalls from '@/hooks/useApiCalls';
 import styles from '../WalletCharts.module.scss';
 
@@ -24,18 +25,12 @@ const UniqueWalletsCard = () => {
 
   return (
     <>
-      <Div
-        type="flex"
-        direction="vertical"
-        hAlign="center"
-        className="bgThemeOne br-rad-px-10 p3 w-per-100">
-        <Card
-          type="stat"
-          number={Number((data?.[0]['ACTIVE_USERS'] / 1000).toFixed(2)) + 'K'}
-          title="All time active users"
-          to={GET_ALL_TIME_WALLET_COUNT_CODE}
-        />
-      </Div>
+      <Card
+        type="stat"
+        number={Number((data?.[0]['ACTIVE_USERS'] / 1000).toFixed(2)) + 'K'}
+        title="All time active users"
+        to={GET_ALL_TIME_WALLET_COUNT_CODE}
+      />
     </>
   );
 };
