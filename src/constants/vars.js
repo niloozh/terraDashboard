@@ -47,7 +47,9 @@ export const COLORS = {
   themeOne: '#d2e4ff',
   themeTwo: '#4359d4',
   themeThree: '#0c1261',
-  themeFour: '#f8986c'
+  themeFour: '#f8986c',
+  dashPink: 'pink',
+  dashYellow: 'rgb(255, 255, 134)'
 };
 
 // ---------------------------------------------------------------------------
