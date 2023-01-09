@@ -5,7 +5,6 @@ import AVGNewUsersAndSenders from './subs/AVGNewUsersAndSenders';
 import styles from './WalletCharts.module.scss';
 import NewWalletsCharts from './subs/NewWalletCharts';
 import CumNewWalletsCharts from './subs/CumNewWalletsCharts';
-import UniqueWalletsCard from './subs/uniqueWalletsCard';
 import WalletDistributionByTXChart from './subs/WalletDistributionByTXChart';
 import Top10UsersByTX from './subs/Top10UsersByTX';
 
