@@ -6,9 +6,11 @@ export const LIST_OF_ICONS = [
   'angleRight',
   'angleUp',
   'certificate',
+  'chart',
   'check-mark',
   'close',
   'dashboard',
+  'development',
   'eye',
   'file-upload',
   'flag',
@@ -24,6 +26,9 @@ export const LIST_OF_ICONS = [
   'rotate',
   'save',
   'search',
+  'supply',
+  'transaction',
+  'wallet',
   'youtube'
 ];
 
