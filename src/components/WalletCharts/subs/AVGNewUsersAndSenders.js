@@ -4,7 +4,7 @@ import { Div } from 'basedesign-iswad';
 import dayjs from 'dayjs';
 import Card from '@/baseComponents/Card';
 import Chart from '@/baseComponents/Chart';
-import UniqueWalletsCard from './uniqueWalletsCard';
+import UniqueWalletsCard from './UniqueWalletsCard';
 import { GET_AVG_UNIQUE_SENDERS_CODE } from '@/constants/apiRoutes';
 import { GET_AVG_UNIQUE_SENDERS } from '@/constants/apiRoutes';
 import useApiCalls from '@/hooks/useApiCalls';
